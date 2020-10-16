@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Balle.tscn" type="PackedScene" id=2]
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 1 )
+balle = ExtResource( 2 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+rotation = 1.5708
+polygon = PoolVector2Array( 16, 16, -2.09815e-06, -48, -16, 16, -1.81e-06, -0.5 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = 1.5708
+polygon = PoolVector2Array( -2.09815e-06, -48, -16, 16, 0, 0, 16, 16 )
+
+[node name="Canon" type="Position2D" parent="."]
+position = Vector2( 64, 0 )
